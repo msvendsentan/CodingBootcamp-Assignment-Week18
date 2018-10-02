@@ -22,7 +22,7 @@ app.set("view engine", "hbs");
 
 app.use(express.static("public"));
 
-//mongoose.connect("mongodb://localhost/dbhere");
+mongoose.connect("mongodb://localhost/nytscraper");
 
 
 app.use(html_routes);
