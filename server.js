@@ -22,7 +22,10 @@ app.set("view engine", "hbs");
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/nytscraper");
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/nytscraper"
+
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI);
 
 
 app.use(html_routes);
