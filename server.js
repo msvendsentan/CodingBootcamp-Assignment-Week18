@@ -8,7 +8,7 @@ const api_routes = require("./routes/api_routes.js");
 // Require all models
 //const db = require("./models");
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
