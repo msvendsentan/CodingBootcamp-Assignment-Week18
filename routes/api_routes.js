@@ -56,7 +56,7 @@ router.get("/articles/saved", function(req, res) {
     });
 });
 
-// Mark Article as Read / Unread
+// Mark Article as Saved / Unsaved
 router.post("/articles/status/:id", function(req, res) {
     db.Article.findByIdAndUpdate(
         { _id: req.params.id },
